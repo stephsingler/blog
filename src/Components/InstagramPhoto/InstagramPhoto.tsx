@@ -1,7 +1,11 @@
 import React from 'react';
 import './InstagramPhoto.scss';
 
-const InstagramPhotoComponent = ({ photo }) => {
+type Props = {
+    photo: string;
+}
+
+const InstagramPhotoComponent = ({ photo }: Props) => {
     return (
         <img className='InstagramPhotoComponent' src={photo} />
     );

@@ -1,7 +1,17 @@
 .FooterComponent {
-  width: 100%;
+  align-items: center;
+  background-color: #a68b80;
+  color: #f4f4f4;
+  display: flex;
+  font-family: poppins, sans-serif;
+  font-size: 10px;
   height: 35px;
-  background-color: #A5988A;
-  //position: absolute;
-  //bottom: 0;
+  justify-content: center;
+  width: 100%;
+  > p {
+    margin-right: 2rem;
+  }
+  > a {
+    cursor: pointer;
+  }
 }
