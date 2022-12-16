@@ -10,7 +10,6 @@ export const GetArticleCollection = async () => {
               publishDate
               articleSlug
               image {
-                title
                 url
               }
               topicsCollection(limit: 3) {
