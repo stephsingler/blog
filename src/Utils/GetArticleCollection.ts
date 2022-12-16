@@ -1,5 +1,5 @@
 export const GetArticleCollection = async () => {
-    const url = 'https://graphql.contentful.com/content/v1/spaces/vnjog8kvani5/?access_token=mr5xKbqV9N0kbw96DesM1tFO6N8vnpc3YlAQ_qi2HhQ';
+    const url = `${process.env.REACT_APP_CONTENTFUL_HOSTNAME}spaces/${process.env.REACT_APP_CONTENTFUL_SPACE_ID}/?access_token=${process.env.REACT_APP_CONTENTFUL_API_KEY}`;
 
     const query = {
         query: `query {

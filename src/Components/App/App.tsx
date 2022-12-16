@@ -1,34 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import FooterComponent from '../Footer/Footer';
 import InstagramFeedComponent from '../InstagramFeed/InstagramFeed';
 import HeaderComponent from "../Header/Header";
-import { GetArticle } from "../../Utils/GetArticle";
 import ArticlesPageComponent from "../../ArticlesPage/ArticlesPage";
+import ArticlePageComponent from "../../ArticlePage/ArticlePage";
 
-type Props = {
-    children: React.ReactNode;
-}
-
-
-const AppComponent = ({ children }) => {
-    const [article, setArticle] = useState({});
-
-    useEffect(() => {
-        (async () => {
-            const { article } = await GetArticle({ slug: 'test-article' });
-            setArticle(article);
-        })();
-
-        return () => {};
-    }, []);
-
+const AppComponent = () => {
   return (
-      <section className="AppComponent">
-         <HeaderComponent/>
-         {children}
-         <FooterComponent/>
-      </section>
+      <Router>
+          <section className="AppComponent">
+              <HeaderComponent/>
+              <Routes>
+                  <Route path="articles" element={<ArticlesPageComponent />} />
+                  <Route path="articles/:articleSlug" element={<ArticlePageComponent />} />
+              </Routes>
+              <FooterComponent/>
+          </section>
+      </Router>
   );
 };
 

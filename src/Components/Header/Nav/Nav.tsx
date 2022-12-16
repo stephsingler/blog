@@ -3,13 +3,9 @@ import { NavLink } from "react-router-dom";
 import './Nav.scss';
 
 const NavComponent = () => {
-    // This styling will be applied to a <NavLink> when the
-    // route that it links to is currently selected.
     let activeStyle = {
         color: '#a68b80'
     };
-
-    let activeClassName = "#a68b80";
 
     return (
         <nav className="NavComponent">
@@ -27,34 +23,31 @@ const NavComponent = () => {
                 <li>
                     <NavLink
                         to="articles"
-                        className={({ isActive }) =>
-                            isActive ? activeClassName : undefined
+                        style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
                         }
                     >
                         ARTICLES
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="safe-swaps">
-                        {({ isActive }) => (
-                            <span
-                                className={
-                                    isActive ? activeClassName : undefined
-                                }
-                            >
+                    <NavLink
+                        to="safe-swaps"
+                        style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        }
+                    >
                SAFE SWAPS
-              </span>
-                        )}
                     </NavLink>
                 </li>
                 <li>
                     <NavLink
                         to="ingredient-education"
-                        className={({ isActive }) =>
-                            isActive ? activeClassName : undefined
+                        style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
                         }
                     >
-                       INGREDIENT EDUCATIONS
+                       INGREDIENT EDUCATION
                     </NavLink>
                 </li>
             </ul>

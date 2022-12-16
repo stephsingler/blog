@@ -1,5 +1,6 @@
 // @ts-ignore
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ArticleOverview.scss';
 import { Article } from "../../Models/Article";
 
@@ -8,12 +9,14 @@ type Props = {
 }
 
 const ArticleOverviewComponent = ({ article }: Props) => {
-    const { image, title, topicsCollection: { items } } = article;
+    const { articleSlug, image, title, topicsCollection: { items } } = article;
     return (
         <section className="ArticleOverviewComponent">
-            <img src={image.url} alt="article" />
-            <p>{items[0]?.name}</p>
-            <h2>{title}</h2>
+            <Link to={articleSlug}>
+                <img src={image.url} alt="article" />
+                <p>{items[0]?.name}</p>
+                <h2>{title}</h2>
+            </Link>
         </section>
     );
 };
