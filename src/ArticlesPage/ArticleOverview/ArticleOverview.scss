@@ -1,6 +1,8 @@
 .ArticleOverviewComponent {
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  padding: 1.5rem;
   width: 25%;
   &:hover {
     cursor: pointer;
@@ -9,7 +11,7 @@
     }
   }
   > img {
-    height: 250px;
+    aspect-ratio: auto;
   }
   > p {
     font-family: 'Poppins', sans-serif;

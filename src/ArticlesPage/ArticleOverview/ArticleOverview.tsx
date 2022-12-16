@@ -1,7 +1,7 @@
 // @ts-ignore
 import React from 'react';
 import './ArticleOverview.scss';
-import { Article } from "../Models/Article";
+import { Article } from "../../Models/Article";
 
 type Props = {
     article: Article
@@ -12,9 +12,7 @@ const ArticleOverviewComponent = ({ article }: Props) => {
     return (
         <section className="ArticleOverviewComponent">
             <img src={image.url} alt="article" />
-            {!!items.length && (
-                <p>{items[0].name}</p>
-            )}
+            <p>{items[0]?.name}</p>
             <h2>{title}</h2>
         </section>
     );

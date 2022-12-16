@@ -1,18 +1,13 @@
 import React from 'react';
-import { FaAmazon, FaRegEnvelope, FaGoodreadsG, FaInstagram } from 'react-icons/fa';
+import { FaAmazon, FaRegEnvelope, FaInstagram } from 'react-icons/fa';
 import './Header.scss';
+import NavComponent from "./Nav/Nav";
 
 const HeaderComponent = () => {
     return (
         <section className='HeaderComponent'>
             <h3>Stephanie Doolin</h3>
-            <ul>
-                <li>HOME</li>
-                {/*scroll to about*/}
-                <li>ABOUT</li>
-                <li>SAFE SWAPS</li>
-                <li>INGREDIENT EDUCATION</li>
-            </ul>
+            <NavComponent/>
             <ul>
                 <li>
                     <a href='https://www.instagram.com/stephaniemdoolin/' target='_blank' rel='noopener noreferrer'>

@@ -3,10 +3,32 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import AppComponent from './Components/App/App';
 import reportWebVitals from './reportWebVitals';
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import ArticlesPageComponent from "./ArticlesPage/ArticlesPage";
+import ArticlePageComponent from "./ArticlePage/ArticlePage";
+
+const router = createBrowserRouter([
+    {
+        path:"/",
+        element: <AppComponent />,
+
+    },
+    {
+        path: "articles",
+        element: <ArticlesPageComponent />
+    },
+    {
+        path: "articles/:articleSlug",
+        element: <ArticlePageComponent />
+    }
+]);
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppComponent />
+      <RouterProvider router={router} />
   </React.StrictMode>,
   document.getElementById('root')
 );

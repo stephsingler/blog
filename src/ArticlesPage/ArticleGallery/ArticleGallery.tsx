@@ -1,7 +1,7 @@
 import React from 'react';
 import './ArticleGallery.scss';
 import ArticleOverviewComponent from "../ArticleOverview/ArticleOverview";
-import { Article } from "../Models/Article";
+import { Article } from "../..//Models/Article";
 
 type Props = {
     articles: Article[];

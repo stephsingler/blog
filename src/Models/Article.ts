@@ -1,3 +1,4 @@
+import { Topic } from './Topic';
 export class Article {
     articleSlug: string = '';
     author: string = '';
@@ -11,7 +12,7 @@ export class Article {
     publishDate: string = '';
     title: string = '';
     topicsCollection: {
-        items: []
+        items: Topic[]
     };
     url: string = '';
 
