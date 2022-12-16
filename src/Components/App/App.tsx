@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
-import ArticleOverviewComponent from "../../ArticleOverview/ArticleOverview";
+import ArticleGalleryComponent from "../../ArticleGallery/ArticleGallery";
 import FooterComponent from '../Footer/Footer';
 import InstagramFeedComponent from '../InstagramFeed/InstagramFeed';
 import HeaderComponent from "../Header/Header";
@@ -11,8 +11,6 @@ import { GetArticle } from "../../Utils/GetArticle";
 const AppComponent = () => {
     const [articles, setArticles] = useState([]);
     const [article, setArticle] = useState({});
-    console.log(GetArticle({slug: 'test-article'}));
-    console.log(GetArticleCollection())
 
     useEffect(() => {
         (async () => {
@@ -28,7 +26,7 @@ const AppComponent = () => {
   return (
     <section className="AppComponent">
         <HeaderComponent/>
-        <ArticleOverviewComponent articles={articles} />
+        <ArticleGalleryComponent articles={articles} />
         {/*<InstagramFeedComponent />*/}
         <div style={{height: '700px'}}>
             Showing {articles.length} articles

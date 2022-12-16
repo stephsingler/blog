@@ -1,24 +1,21 @@
+// @ts-ignore
 import React from 'react';
+import './ArticleOverview.scss';
+import { Article } from "../Models/Article";
 
 type Props = {
-    articles: any[]
+    article: Article
 }
 
-const ArticleOverviewComponent = ({ articles }: Props) => {
+const ArticleOverviewComponent = ({ article }: Props) => {
+    const { image, title, topicsCollection: { items } } = article;
     return (
         <section className="ArticleOverviewComponent">
-            <h3>Popular Posts</h3>
-            <div>
-                {articles.map((article) => {
-                    const { title, image } = article;
-                    return (
-                        <div>
-                            <img src={image.url} />
-                            <p>{title}</p>
-                        </div>
-                    );
-                })}
-            </div>
+            <img src={image.url} alt="article" />
+            {!!items.length && (
+                <p>{items[0].name}</p>
+            )}
+            <h2>{title}</h2>
         </section>
     );
 };
