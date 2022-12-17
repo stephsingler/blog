@@ -19,6 +19,7 @@ export const GetArticle = async ({ slug }:Props) => {
           image {
             url
           }
+          tempContent
           topicsCollection(limit: 3) {
             items {
               name

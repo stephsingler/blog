@@ -10,6 +10,7 @@ export class Article {
         url: string;
     };
     publishDate: string = '';
+    tempContent: string = '';
     title: string = '';
     topicsCollection: {
         items: Topic[]
