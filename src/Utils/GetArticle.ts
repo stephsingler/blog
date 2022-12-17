@@ -26,20 +26,14 @@ export const GetArticle = async ({ slug }:Props) => {
               slug
             }
           }
+          sources {
+            title
+            content {
+                json
+            }
+          }
           content {
             json
-            links {
-              entries {
-                block {
-                    ...on Sources {
-                      title
-                      content {
-                        json
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
         }

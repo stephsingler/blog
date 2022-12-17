@@ -4,12 +4,17 @@ export class Article {
     author: string = '';
     content: {
         json: any;
-        links: any;
     };
     image: {
         url: string;
     };
     publishDate: string = '';
+    sources: {
+        title: string;
+        content: {
+            json: any;
+        }
+    };
     tempContent: string = '';
     title: string = '';
     topicsCollection: {
