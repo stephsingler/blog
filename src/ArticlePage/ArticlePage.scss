@@ -1,5 +1,7 @@
 .ArticlePageComponent {
-  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   > div.header {
     align-items: center;
     background-image: url('../Images/background.png');
@@ -25,10 +27,23 @@
       text-align: center;
     }
   }
-  > img {
+  > div.image-container {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 4px 0 #545454;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 55px;
     margin-top: -55px;
+    padding: 2rem 2rem;
+    width: 650px;
   }
   > div.content {
+    font-size: 19px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    line-height: 32px;
+    margin-bottom: 50px;
+    max-width: 700px;
     width: 50%;
   }
 }

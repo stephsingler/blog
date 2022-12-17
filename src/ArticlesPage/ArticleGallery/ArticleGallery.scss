@@ -1,5 +1,8 @@
 .ArticleGalleryComponent {
   display: flex;
-  justify-content: center;
+  height: 100vh;
+  justify-content: space-around;
+  margin-left: 10%;
+  margin-top: 100px;
   width: 80%;
 }

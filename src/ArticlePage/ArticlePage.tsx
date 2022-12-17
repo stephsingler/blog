@@ -22,16 +22,29 @@ const ArticlePageComponent = () => {
 
     const { author, image, title, tempContent, topicsCollection } = article;
 
+    const renderParagraphs = () => {
+        const paragraphs = tempContent.split('\n');
+        return paragraphs.map((p, i) => {
+            return (
+                <p key={i}>{p}</p>
+            );
+        });
+    };
+
     return (
         <section className="ArticlePageComponent">
             <div className='header'>
                 <p>{topicsCollection?.items[0]?.name}</p>
                 <h1>{title}</h1>
             </div>
-            <img src={image?.url} alt="article" />
-            <div className='content'>
-                {tempContent}
+            <div className="image-container">
+                <img src={image?.url} alt="main" />
             </div>
+            { tempContent && (
+                <div className='content'>
+                    {renderParagraphs()}
+                </div>
+            )}
         </section>
     );
 };
