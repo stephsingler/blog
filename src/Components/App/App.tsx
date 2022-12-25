@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import FooterComponent from '../Footer/Footer';
-import InstagramFeedComponent from '../InstagramFeed/InstagramFeed';
 import HeaderComponent from "../Header/Header";
-import ArticlesPageComponent from "../../ArticlesPage/ArticlesPage";
-import ArticlePageComponent from "../../ArticlePage/ArticlePage";
+import ArticlesPageComponent from "../ArticlesPage/ArticlesPage";
+import ArticlePageComponent from "../ArticlePage/ArticlePage";
+import IngredientEducationComponent from "../IngredientEducation/IngredientEducation";
 
 const AppComponent = () => {
   return (
@@ -15,6 +15,7 @@ const AppComponent = () => {
               <Routes>
                   <Route path="articles" element={<ArticlesPageComponent />} />
                   <Route path="articles/:articleSlug" element={<ArticlePageComponent />} />
+                  <Route path="ingredient-education" element={<IngredientEducationComponent />} />
               </Routes>
               <FooterComponent/>
           </section>

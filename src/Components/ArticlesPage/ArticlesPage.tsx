@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { GetArticleCollection } from "../Utils/GetArticleCollection";
+import { GetArticleCollection } from "../../Utils/GetArticleCollection";
 import ArticleGalleryComponent from "./ArticleGallery/ArticleGallery";
 
 const ArticlesPageComponent = () => {

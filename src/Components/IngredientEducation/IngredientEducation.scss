@@ -1,0 +1,16 @@
+.IngredientEducationComponent {
+  > div.ingredients-chart {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 3rem;
+    width: 80%;
+    > img {
+      margin: 1rem 0;
+      max-height: 650px;
+      max-width: 900px;
+      width: 100%;
+    }
+  }
+}

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-import { Article } from "../Models/Article";
+import { Article } from "../../Models/Article";
 
 import './ArticlePage.scss';
-import { GetArticle } from "../Utils/GetArticle";
+import { GetArticle } from "../../Utils/GetArticle";
 
 
 const ArticlePageComponent = () => {

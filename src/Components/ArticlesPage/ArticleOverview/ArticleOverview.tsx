@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ArticleOverview.scss';
-import { Article } from "../../Models/Article";
+import { Article } from "../../../Models/Article";
 
 type Props = {
     article: Article
