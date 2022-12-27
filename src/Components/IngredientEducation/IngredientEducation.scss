@@ -1,3 +1,7 @@
+$phone: 640px;
+$tablet: 821px;
+$desktop: 1024px;
+
 .IngredientEducationComponent {
   > div.ingredients-chart {
     align-items: center;
@@ -6,6 +10,10 @@
     margin-left: 10%;
     margin-top: 3rem;
     width: 80%;
+    @media screen and (max-width: $phone) {
+      margin-left: 3%;
+      width: 94%;
+    }
     > img {
       margin: 1rem 0;
       max-height: 650px;
@@ -13,9 +21,13 @@
       width: 100%;
     }
   }
-  >div.ingredients-collection {
+  > div.ingredients-collection {
     margin-left: 20%;
     margin-top: 5rem;
     width: 60%;
+    @media screen and (max-width: $phone) {
+      margin-left: 5%;
+      width: 90%;
+    }
   }
 }

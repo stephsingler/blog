@@ -1,9 +1,16 @@
+$phone: 640px;
+$tablet: 821px;
+
 .HeaderComponent {
+  @media screen and (max-width: $phone) {
+    display: none;
+  }
   align-items: center;
   background-color: #ffffff;
   display: flex;
   height: 65px;
   justify-content: space-between;
+  overflow: hidden;
   padding: 0 3rem;
   ul {
     align-items: center;
@@ -22,5 +29,8 @@
     font-family: 'Sacramento', cursive;
     font-size: 38px;
     font-weight: 400;
+    @media screen and (min-width: $phone) and (max-width: $tablet) {
+      font-size: 22px;
+    }
   }
 }

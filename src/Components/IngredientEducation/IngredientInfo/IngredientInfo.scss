@@ -1,3 +1,7 @@
+$phone: 640px;
+$tablet: 821px;
+$desktop: 1024px;
+
 .IngredientInfoComponent {
   max-width: 900px;
   > div.ingredient-name {
@@ -8,6 +12,10 @@
       font-size: 20px;
       letter-spacing: 0.10rem;
       margin-right: 1rem;
+      @media screen and (max-width: $phone) {
+        font-size: 16px;
+        margin-right: 0.5rem;
+      }
     }
     > p {
       cursor: pointer;

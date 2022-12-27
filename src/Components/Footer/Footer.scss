@@ -1,3 +1,6 @@
+$phone: 640px;
+$tablet: 821px;
+
 .FooterComponent {
   align-items: center;
   background-color: #a68b80;
@@ -10,6 +13,9 @@
   width: 100%;
   > p {
     margin-right: 2rem;
+    @media screen and (max-width: $phone) {
+      margin-right: 1rem;
+    }
   }
   > a {
     cursor: pointer;
