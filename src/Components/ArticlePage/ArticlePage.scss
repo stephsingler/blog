@@ -36,6 +36,10 @@
     margin-top: -55px;
     padding: 2rem 2rem;
     width: 650px;
+    > img {
+      max-width: 100%;
+      min-width: 100%;
+    }
   }
   > div.content {
     font-size: 19px;
