@@ -12,7 +12,7 @@ import HomepageComponent from "../Homepage/Homepage";
 const AppComponent = () => {
   return (
       <section className="AppComponent">
-          <HeaderComponent/>
+          {/*<HeaderComponent/>*/}
           <Routes>
               <Route path="/" element={<HomepageComponent />} />
               <Route path="articles" element={<ArticlesPageComponent />} />
